@@ -17,7 +17,6 @@ public Controller()
  */
 public void start()
 {
-	 Humans myHuman = new Humans();
-	 System.out.println(Humans);
+	 
 }
 }
