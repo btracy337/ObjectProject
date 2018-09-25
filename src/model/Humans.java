@@ -9,28 +9,6 @@ private int strength;
 private int intelligence;
 private int charisma;
 private boolean wisdom;
-
-public Humans()
-{
-	
-}
-/*
- * name is string
- * attractiveness is value 1-10
- * strength is value 1-10
- * intelligence is value 1-10
- * charisma is value 1-10
- * wisdom is either true or false
- */
-public Humans()
-{
-	this.attractiveness = 7;
-	this.name = "Bryan";
-	this.strength = 4;
-	this.intelligence = 6;
-	this.charisma = 7;
-	this.wisdom = false;
-}
 public Humans(String name, int attractiveness, int strength, int intelligence, int charisma, boolean wisdom)
 {
  this.name = name;
