@@ -18,46 +18,61 @@ public class Controller
 	 */
 	public void start()
 	{
-askUser();
+		askUser();
 	}
 
-private void askUser()
-{
-String response = JOptionPane.showInputDialog(null, "What is the distance??");
-while (!validInt(response))
-{
-	response = JOptionPane.showInputDialog(null, "No? type in a valid number for the distance");
-}
-}
-public boolean validInt(String maybeInt)
-{
-	boolean isValid = false;
+	private void askUser()
+	{
+		Humans userHuman = new Humans();
+		String response = JOptionPane.showInputDialog(null, "What your characters attractiveness 1-10?");
+		while (!validInt(response))
+		{
+			response = JOptionPane.showInputDialog(null, "No? type in a valid number for the attractiveness");
+		}
+		userHuman.setAttractiveness(Integer.parseInt(response));
+		response = JOptionPane.showInputDialog(null, "What is your character's strength");
+		while (!validInt(response))
+		{
+			response = JOptionPane.showInputDialog(null, "No! Type in a valid number for strength");
+		}
+		userHuman.setStrength(Integer.parseInt(response));
+		response = JOptionPane.showInputDialog(null, "What is your characters intelligence?");
+		while(!validInt(response))
+		{
+			response = JOptionPane.showInputDialog(null, "No type in a valid number for intelligence");
+		}
+		userHuman.setIntelligence(Integer.parseInt(response));
+	}
 
-	try
+	public boolean validInt(String maybeInt)
 	{
-		Integer.parseInt(maybeInt);
-		isValid = true;
-	}
-	catch (NumberFormatException error)
-	{
-		JOptionPane.showMessageDialog(null, "You should type an integer value like 12345.");
+		boolean isValid = false;
+
+		try
+		{
+			Integer.parseInt(maybeInt);
+			isValid = true;
+		}
+		catch (NumberFormatException error)
+		{
+			JOptionPane.showMessageDialog(null, "You should type an integer value like 12345.");
+		}
+
+		return isValid;
 	}
 
-	return isValid;
-}
-
-public boolean validDouble(String maybeDouble)
-{
-	boolean isValid = false;
-	try
+	public boolean validDouble(String maybeDouble)
 	{
-		Double.parseDouble(maybeDouble);
-		isValid = true;
+		boolean isValid = false;
+		try
+		{
+			Double.parseDouble(maybeDouble);
+			isValid = true;
+		}
+		catch (NumberFormatException error)
+		{
+			JOptionPane.showMessageDialog(null, "This requirese a double value human!");
+		}
+		return isValid;
 	}
-	catch (NumberFormatException error)
-	{
-		JOptionPane.showMessageDialog(null, "This requirese a double value human!");
-	}
-	return isValid;
-}
 }
