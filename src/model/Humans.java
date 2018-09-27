@@ -84,5 +84,16 @@ public class Humans
 	{
 		this.wisdom = wisdom;
 	}
+	public String toString()
+	{
+		String user;
+		user = "Your character " + name
+				+ " has a strength of " + strength
+				+ ", has intelligence of " + intelligence
+				+ ", has an attractiveness of " + attractiveness
+				+ ", has a charisma of " + charisma
+				+ ", it is " + wisdom + " that your character has wisdom.";
+		return user;
+	}
 
 }

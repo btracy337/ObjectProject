@@ -42,6 +42,25 @@ public class Controller
 			response = JOptionPane.showInputDialog(null, "No type in a valid number for intelligence");
 		}
 		userHuman.setIntelligence(Integer.parseInt(response));
+		response = JOptionPane.showInputDialog(null, "What is your characters charisma?");
+		while (!validInt(response))
+		{
+			response = JOptionPane.showInputDialog(null, "type in a valid int for charisma.");
+		}
+		userHuman.setCharisma(Integer.parseInt(response));
+		response = JOptionPane.showInputDialog(null, "Does your character have wisdom. True/False").toLowerCase();
+		while (!response.equals("true")&&!response.equals("false"))
+		{
+			response = JOptionPane.showInputDialog(null, "Enter either true or false.").toLowerCase();
+		}
+		boolean hasWisdom = false;
+		if (response.equals("true")) {
+			hasWisdom = true;
+		}
+		userHuman.setWisdom(hasWisdom);
+		response = JOptionPane.showInputDialog(null, "What is your characters name?");
+		userHuman.setName(response);
+		JOptionPane.showMessageDialog(null, userHuman);
 	}
 
 	public boolean validInt(String maybeInt)
@@ -71,7 +90,21 @@ public class Controller
 		}
 		catch (NumberFormatException error)
 		{
-			JOptionPane.showMessageDialog(null, "This requirese a double value human!");
+			JOptionPane.showMessageDialog(null, "This requires a double value human!");
+		}
+		return isValid;
+	}
+	public boolean validBoolean(String maybeBoolean)
+	{
+		boolean isValid = false;
+		try
+		{
+			Boolean.parseBoolean(maybeBoolean);
+			isValid = true;
+		}	
+		catch (NumberFormatException error)
+		{
+			JOptionPane.showMessageDialog(null, "Enter a valid true/false.");
 		}
 		return isValid;
 	}
