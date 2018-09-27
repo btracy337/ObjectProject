@@ -37,7 +37,7 @@ public class Controller
 		}
 		userHuman.setStrength(Integer.parseInt(response));
 		response = JOptionPane.showInputDialog(null, "What is your characters intelligence?");
-		while(!validInt(response))
+		while (!validInt(response))
 		{
 			response = JOptionPane.showInputDialog(null, "No type in a valid number for intelligence");
 		}
