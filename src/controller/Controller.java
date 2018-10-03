@@ -27,25 +27,25 @@ public class Controller
 		String response = JOptionPane.showInputDialog(null, "What your characters attractiveness 1-10?");
 		while (!validInt(response))
 		{
-			response = JOptionPane.showInputDialog(null, "No? type in a valid number for the attractiveness");
+			response = JOptionPane.showInputDialog(null, "No! type in a valid number for the attractiveness.");
 		}
 		userHuman.setAttractiveness(Integer.parseInt(response));
-		response = JOptionPane.showInputDialog(null, "What is your character's strength");
+		response = JOptionPane.showInputDialog(null, "What is your character's strength?");
 		while (!validInt(response))
 		{
-			response = JOptionPane.showInputDialog(null, "No! Type in a valid number for strength");
+			response = JOptionPane.showInputDialog(null, "No! Type in a valid number for strength.");
 		}
 		userHuman.setStrength(Integer.parseInt(response));
 		response = JOptionPane.showInputDialog(null, "What is your characters intelligence?");
 		while (!validInt(response))
 		{
-			response = JOptionPane.showInputDialog(null, "No type in a valid number for intelligence");
+			response = JOptionPane.showInputDialog(null, "No! type in a valid number for intelligence.");
 		}
 		userHuman.setIntelligence(Integer.parseInt(response));
 		response = JOptionPane.showInputDialog(null, "What is your characters charisma?");
 		while (!validInt(response))
 		{
-			response = JOptionPane.showInputDialog(null, "type in a valid int for charisma.");
+			response = JOptionPane.showInputDialog(null, "Type in a valid int for charisma.");
 		}
 		userHuman.setCharisma(Integer.parseInt(response));
 		response = JOptionPane.showInputDialog(null, "Does your character have wisdom. True/False").toLowerCase();
