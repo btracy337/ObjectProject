@@ -20,7 +20,11 @@ public class Controller
 	{
 		askUser();
 	}
-
+/**
+ * This is the method where the computer asks the user a question and the user must input a valid value.
+ * If they do not enter a valid value the screen prints that they should enter one.
+ * Then their input sets the models attributes to their input.
+ */
 	private void askUser()
 	{
 		Humans userHuman = new Humans();
@@ -62,7 +66,11 @@ public class Controller
 		userHuman.setName(response);
 		JOptionPane.showMessageDialog(null, userHuman);
 	}
-
+/**
+ * This is a formal parameter where if it is not integer then it prints of "You should type a valid integer as opposed to the program just crahsing."
+ * @param maybeInt
+ * @return
+ */
 	public boolean validInt(String maybeInt)
 	{
 		boolean isValid = false;
