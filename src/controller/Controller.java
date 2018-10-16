@@ -67,7 +67,7 @@ public class Controller
 		JOptionPane.showMessageDialog(null, userHuman);
 	}
 /**
- * This is a formal parameter where if it is not integer then it prints of "You should type a valid integer as opposed to the program just crahsing."
+ * This is a formal parameter where if it is not integer then it prints of "You should type a valid integer," as opposed to the program just crashing.
  * @param maybeInt
  * @return
  */
